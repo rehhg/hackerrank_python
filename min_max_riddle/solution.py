@@ -1,5 +1,3 @@
-#!/bin/python3
-
 import math
 import os
 
@@ -64,13 +62,13 @@ def largest_minima_window(arr):
     left_window = largest_window_left(arr)
     right_window = largest_window_right(arr)
     print ("left_window {}, right_window {}".format(left_window, right_window))
-    largest_minima_window = []
+    largest_minimal_window = []
 
     for left, right in zip(left_window, right_window):
-        largest_minima_window.append(left + right - 1)
+        largest_minimal_window.append(left + right - 1)
 
-    print ("largest_minima_window: {}".format(largest_minima_window))
-    return largest_minima_window
+    print ("largest_minima_window: {}".format(largest_minimal_window))
+    return largest_minimal_window
 
 
 def largest_window_left(arr):

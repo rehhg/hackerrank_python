@@ -11,11 +11,13 @@ def contains_only_one_different_character_count(string):
     if all_counts_are_equal(character_counts):
         return True
     else:
-        for character in characterCounts:
+        for character in character_counts:
             character_count_with_one_removed_character = character_counts.copy()
             character_count_with_one_removed_character[character] -= 1
-            character_count_with_one_removed_character += Counter()  # remove zero and negative counts
-            if allCountsAreEqual(character_count_with_one_removed_character):
+
+            # remove zero and negative counts
+            character_count_with_one_removed_character += Counter()
+            if all_counts_are_equal(character_count_with_one_removed_character):
                 return True
     return False
 

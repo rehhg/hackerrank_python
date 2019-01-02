@@ -5,12 +5,10 @@ def fun(email):
     except ValueError:
         return False
 
-    if username.replace('-', '').replace('_', '').isalnum() is False:
+    if username.replace('-', '').replace('_', '').isalnum() is False \
+            or website.isalnum() is False or len(extension) > 3:
         return False
-    elif website.isalnum() is False or len(extension) > 3:
-        return False
-    else:
-        return True
+    return True
 
 
 def filter_mail(emails):
@@ -23,6 +21,6 @@ if __name__ == '__main__':
     for _ in range(n):
         emails.append(input())
 
-filtered_emails = filter_mail(emails)
-filtered_emails.sort()
-print(filtered_emails)
+    filtered_emails = filter_mail(emails)
+    filtered_emails.sort()
+    print(filtered_emails)

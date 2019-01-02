@@ -1,11 +1,9 @@
-#!/bin/python3
-
 import os
 from statistics import median
 
 
 def getTrailingExpenditures(dayNumber, dailyExpenditures, trailingDays):
-    return dailyExpenditures[dayNumber - trailingDays : dayNumber]
+    return dailyExpenditures[dayNumber - trailingDays: dayNumber]
 
 
 def getTrailingMedian(dayNumber, dailyExpenditures, trailingDays):
@@ -21,6 +19,7 @@ def activityNotificationOnDay(dayNumber, dailyExpenditures, trailingDays):
     todaySpend = dailyExpenditures[dayNumber]
     trailingMedian = getTrailingMedian(dayNumber, dailyExpenditures, trailingDays)
     return todaySpend >= 2 * trailingMedian
+
 
 def activityNotifications(dailyExpenditures, trailingDays):
     activityNotifications = 0

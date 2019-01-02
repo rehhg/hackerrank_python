@@ -1,11 +1,7 @@
-#!/bin/python3
-
-import math
 import os
 
+
 # Complete the minimumBribes function below.
-
-
 def minimumBribes(finalLine):
     if invalid(finalLine):
         return "Too chaotic"

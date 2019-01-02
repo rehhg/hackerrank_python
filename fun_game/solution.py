@@ -1,7 +1,5 @@
 import os
 import random
-import re
-import sys
 
 
 # Complete the funGame function below.
@@ -10,8 +8,10 @@ def funGame(a, b, n):
     add = c = 0
     for i in range(n):
         index = s.index(max(s))
-        if c == 0: add += a[index]
-        if c == 1: add -= b[index]
+        if c == 0:
+            add += a[index]
+        if c == 1:
+            add -= b[index]
         s.pop(index)
         a.pop(index)
         b.pop(index)
